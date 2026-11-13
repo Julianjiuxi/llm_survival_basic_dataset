@@ -1,0 +1,94 @@
+table,column,description,missing_values
+requests.csv,case_id,HMAC-pseudonymous generation request key,not expected
+requests.csv,prompt_group_id,HMAC-pseudonymous repeated-prompt cluster key,not expected
+requests.csv,sampling_block,One of ten independent with-replacement sampling blocks,not expected
+requests.csv,split,Frozen group-safe train/validation/test split,not expected
+requests.csv,prompt_tokens,Prompt tokens before chat template,not expected
+requests.csv,model_input_tokens,Model input tokens after chat template,not expected
+requests.csv,log1p_prompt_tokens,Natural log of one plus prompt_tokens,not expected
+requests.csv,was_truncated,Prompt truncated at 4096 tokenizer tokens,not expected
+requests.csv,language_detected,Heuristic primary language label,not expected
+requests.csv,language_group,Major language or other,not expected
+requests.csv,language_confidence,Heuristic language confidence,not expected
+requests.csv,language_second,Second-ranked heuristic language,not expected
+requests.csv,language_margin,Gap between top two language scores,not expected
+requests.csv,language_status,Language detector status,not expected
+requests.csv,code_switching,Heuristic multi-language prompt flag,not expected
+requests.csv,code_switching_score,Heuristic code-switching score,not expected
+requests.csv,length_instruction_type,Rule-based requested-length instruction type,not expected
+requests.csv,has_numeric_length_request,Prompt contains a numeric length request,not expected
+requests.csv,requested_length_value,Parsed central requested length,allowed when not applicable or not observable
+requests.csv,requested_length_lower,Parsed requested-length lower bound,allowed when not applicable or not observable
+requests.csv,requested_length_upper,Parsed requested-length upper bound,allowed when not applicable or not observable
+requests.csv,requested_length_unit,Parsed requested-length unit,allowed when not applicable or not observable
+requests.csv,log1p_requested_length_value,Natural log of one plus requested length,not expected
+requests.csv,has_code_fence,Rule-based prompt structure feature,not expected
+requests.csv,code_fence_count,Rule-based prompt structure feature,not expected
+requests.csv,has_url,Rule-based prompt structure feature,not expected
+requests.csv,url_count,Rule-based prompt structure feature,not expected
+requests.csv,has_bullet_list,Rule-based prompt structure feature,not expected
+requests.csv,bullet_line_count,Rule-based prompt structure feature,not expected
+requests.csv,has_valid_json,Rule-based prompt structure feature,not expected
+requests.csv,has_json_like_structure,Rule-based prompt structure feature,not expected
+requests.csv,paragraph_count,Rule-based prompt structure feature,not expected
+requests.csv,question_mark_count,Rule-based prompt structure feature,not expected
+requests.csv,digit_count,Rule-based prompt structure feature,not expected
+requests.csv,digit_ratio,Rule-based prompt structure feature,not expected
+requests.csv,repetition_bigram_ratio,Rule-based prompt structure feature,not expected
+requests.csv,output_tokens_excluding_eos,Visible output tokens,not expected
+requests.csv,survival_time,Token risk time including final EOS for events,not expected
+requests.csv,event,1 if EOS observed; 0 if administratively censored,not expected
+requests.csv,censored,1-event,not expected
+requests.csv,censor_limit,Administrative maximum new-token limit,not expected
+requests.csv,finish_reason,eos or length,not expected
+requests.csv,first_eos_token_index,EOS token index; missing when censored,allowed when not applicable or not observable
+requests.csv,endpoint_class_18,Zero-based fixed terminal-length class,not expected
+requests.csv,endpoint_interval_18,Human-readable fixed terminal-length interval,not expected
+requests.csv,analysis_eligible,Passes the frozen main-analysis eligibility rules,not expected
+requests.csv,batch_size_actual,Dynamic batch size when request entered generation,not expected
+requests.csv,time_to_first_token_ms,Batch-context time to first token in milliseconds,not expected
+requests.csv,total_latency_ms,Batch-lifecycle request latency in milliseconds,not expected
+landmarks/*.csv,case_id,HMAC-pseudonymous generation request key,not expected
+landmarks/*.csv,prompt_group_id,HMAC-pseudonymous repeated-prompt cluster key,not expected
+landmarks/*.csv,split,Frozen group-safe train/validation/test split,not expected
+landmarks/*.csv,landmark,Tokens generated before the landmark forecast,not expected
+landmarks/*.csv,remaining_followup_tokens,Observed follow-up tokens after landmark,not expected
+landmarks/*.csv,remaining_event,EOS event indicator for remaining follow-up,not expected
+landmarks/*.csv,remaining_censor_limit,Maximum observable follow-up after landmark,not expected
+landmarks/*.csv,endpoint_class_18,Zero-based fixed terminal-length class,not expected
+landmarks/*.csv,endpoint_interval_18,Human-readable fixed terminal-length interval,not expected
+landmarks/*.csv,eos_logprob_last,Online dynamic feature; see FIELD_DICTIONARY.md,not expected
+landmarks/*.csv,eos_logprob_mean,Online dynamic feature; see FIELD_DICTIONARY.md,not expected
+landmarks/*.csv,eos_logprob_max,Online dynamic feature; see FIELD_DICTIONARY.md,not expected
+landmarks/*.csv,eos_logprob_slope,Online dynamic feature; see FIELD_DICTIONARY.md,not expected
+landmarks/*.csv,log_eos_rank_last,Online dynamic feature; see FIELD_DICTIONARY.md,not expected
+landmarks/*.csv,log_eos_rank_mean,Online dynamic feature; see FIELD_DICTIONARY.md,not expected
+landmarks/*.csv,log_eos_rank_min,Online dynamic feature; see FIELD_DICTIONARY.md,not expected
+landmarks/*.csv,log_eos_rank_slope,Online dynamic feature; see FIELD_DICTIONARY.md,not expected
+landmarks/*.csv,entropy_raw_last,Online dynamic feature; see FIELD_DICTIONARY.md,not expected
+landmarks/*.csv,entropy_raw_mean,Online dynamic feature; see FIELD_DICTIONARY.md,not expected
+landmarks/*.csv,entropy_raw_slope,Online dynamic feature; see FIELD_DICTIONARY.md,not expected
+landmarks/*.csv,margin_last,Online dynamic feature; see FIELD_DICTIONARY.md,not expected
+landmarks/*.csv,margin_mean,Online dynamic feature; see FIELD_DICTIONARY.md,not expected
+landmarks/*.csv,margin_slope,Online dynamic feature; see FIELD_DICTIONARY.md,not expected
+landmarks/*.csv,surprisal_mean,Online dynamic feature; see FIELD_DICTIONARY.md,not expected
+landmarks/*.csv,surprisal_slope,Online dynamic feature; see FIELD_DICTIONARY.md,not expected
+landmarks/*.csv,support_rate,Online dynamic feature; see FIELD_DICTIONARY.md,not expected
+landmarks/*.csv,processed_entropy_mean,Online dynamic feature; see FIELD_DICTIONARY.md,not expected
+landmarks/*.csv,repetition_last,Online dynamic feature; see FIELD_DICTIONARY.md,not expected
+landmarks/*.csv,repetition_mean,Online dynamic feature; see FIELD_DICTIONARY.md,not expected
+landmarks/*.csv,repetition_slope,Online dynamic feature; see FIELD_DICTIONARY.md,not expected
+landmarks/*.csv,sentence_rate,Online dynamic feature; see FIELD_DICTIONARY.md,not expected
+landmarks/*.csv,paragraph_rate,Online dynamic feature; see FIELD_DICTIONARY.md,not expected
+landmarks/*.csv,end_within_32,EOS within 32 tokens after landmark; blank if unknown,allowed when not applicable or not observable
+landmarks/*.csv,end_within_32_observed,Whether end_within_32 is identifiable,allowed when not applicable or not observable
+landmarks/*.csv,end_within_64,EOS within 64 tokens after landmark; blank if unknown,allowed when not applicable or not observable
+landmarks/*.csv,end_within_64_observed,Whether end_within_64 is identifiable,allowed when not applicable or not observable
+landmarks/*.csv,end_within_128,EOS within 128 tokens after landmark; blank if unknown,allowed when not applicable or not observable
+landmarks/*.csv,end_within_128_observed,Whether end_within_128 is identifiable,allowed when not applicable or not observable
+landmarks/*.csv,end_within_256,EOS within 256 tokens after landmark; blank if unknown,allowed when not applicable or not observable
+landmarks/*.csv,end_within_256_observed,Whether end_within_256 is identifiable,allowed when not applicable or not observable
+landmarks/*.csv,end_within_512,EOS within 512 tokens after landmark; blank if unknown,allowed when not applicable or not observable
+landmarks/*.csv,end_within_512_observed,Whether end_within_512 is identifiable,allowed when not applicable or not observable
+landmarks/*.csv,end_within_1024,EOS within 1024 tokens after landmark; blank if unknown,allowed when not applicable or not observable
+landmarks/*.csv,end_within_1024_observed,Whether end_within_1024 is identifiable,allowed when not applicable or not observable
