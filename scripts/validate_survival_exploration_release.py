@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Validate keys, censoring labels, privacy fields, and file hashes."""
+"""Validate the public survival-exploration CSV release."""
 
 from __future__ import annotations
 

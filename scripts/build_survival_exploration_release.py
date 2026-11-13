@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Build the anonymized, analysis-ready CSV course release."""
+"""Build the anonymized CSV release for basic survival-analysis exploration."""
 
 from __future__ import annotations
 
@@ -262,7 +262,7 @@ def main() -> None:
 
     files = sorted(p for p in args.output.rglob("*.csv"))
     manifest = {
-        "release": "course-csv-v1.0.0",
+        "release": "survival-exploration-csv-v1.0.0",
         "privacy_profile": "no text, token ids, source ids, raw hashes, or seeds",
         "rows": {"requests": len(requests_public), "landmarks": len(panel)},
         "landmark_counts": {str(int(k)): int(v) for k, v in panel["landmark"].value_counts().sort_index().items()},

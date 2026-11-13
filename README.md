@@ -1,6 +1,6 @@
-# LLM 生成长度生存分析课程数据
+# LLM 生成长度：基础生存分析探索数据集
 
-这是为生存分析小组作业准备的公开 CSV 数据集。它把 50,000 次 Qwen3-8B 生成请求整理成两层：
+这是一个面向基础生存分析方法探索的公开 CSV 数据集。它把 50,000 次 Qwen3-8B 生成请求整理成两层：
 
 - `data/requests.csv`：一行一个请求，适合 Kaplan–Meier、Cox、AFT、删失敏感性和静态协变量分析；
 - `data/landmarks/*.csv`：一行一个“仍在生成的请求 × landmark”，适合 time-dependent covariates、剩余生存时间和未来 horizon 终止预测。
@@ -69,10 +69,10 @@ coxph(Surv(remaining_followup_tokens, remaining_event) ~
 
 ## 重建与校验
 
-`scripts/build_course_release.py` 从本项目只读归档重新聚合公开 CSV；`scripts/validate_course_release.py` 检查主键、风险集、标签、隐私字段和 SHA-256。
+`scripts/build_survival_exploration_release.py` 从本项目只读归档重新聚合公开 CSV；`scripts/validate_survival_exploration_release.py` 检查主键、风险集、标签、隐私字段和 SHA-256。
 
 ```bash
-python scripts/validate_course_release.py --root .
+python scripts/validate_survival_exploration_release.py --root .
 ```
 
-该仓库只面向教学和方法复现，不适合事实性、偏好、安全性或个体层面的结论。
+该仓库面向基础生存分析、动态协变量探索和方法复现，不适合事实性、偏好、安全性或个体层面的结论。

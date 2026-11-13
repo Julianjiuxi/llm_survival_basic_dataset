@@ -23,7 +23,7 @@ landmark `a` 的一行满足 `survival_time > a`，且动态特征只使用 `tok
 
 ## 重复 prompt 与切分
 
-抽样有放回。同一 prompt 的重复请求共享 `prompt_group_id`，并被分配到同一冻结 split。课程作业应：
+抽样有放回。同一 prompt 的重复请求共享 `prompt_group_id`，并被分配到同一冻结 split。分析时应：
 
 - 使用现成 split；
 - cluster bootstrap 或稳健标准误按 `prompt_group_id` 聚类；

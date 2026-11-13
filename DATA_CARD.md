@@ -39,7 +39,7 @@
 
 清洗池排除了空首条用户消息、项目规则匹配的 PII-like 文本、`redacted=true` 和标记为 toxic 的来源记录，并进行规范化与去重。十个 5,000 条子集采用固定种子独立有放回抽样。模型 prompt 在 4,096 tokenizer token 处截断；50,000 个请求中 194 条被截断。
 
-自动过滤和规则标签可能漏检，不能证明所有敏感、版权或不良内容已从内部全文归档中清除。公开课程版不分发全文，从根本上降低了这一风险。
+自动过滤和规则标签可能漏检，不能证明所有敏感、版权或不良内容已从内部全文归档中清除。本公开探索版本不分发全文，从根本上降低了这一风险。
 
 ## 推荐用途
 
@@ -57,10 +57,10 @@
 - 2,048 token 上限导致长尾删失。
 - 请求级时延受 dynamic batching 和硬件影响，不是隔离请求的服务时间。
 - 数据不含回答质量、事实性或人工偏好标签。
-- 本项目 test split 已用于多轮探索性研究，正式确认结论需要新的 prompt 确认集。
+- 本项目 test split 已用于多轮探索性研究，因此基于该 split 的既有结果应视为探索性结果；独立确认需要另设确认数据。
 
 ## 许可与引用
 
-WildChat 的数据库许可为其官方仓库所述的 ODC-By；该许可不自动解决单条内容的独立隐私、人格或版权权利。Qwen3 模型许可和引用以所用模型卡为准。见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+WildChat 的数据库许可为其官方仓库所述的 ODC-By；该许可不自动解决单条内容的独立隐私、人格或版权权利。Qwen3 模型许可和引用以所用模型卡为准。见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) 和 [DATA_LICENSE.md](DATA_LICENSE.md)。
 
-正式对外发布前，仓库维护者仍需填写作者、联系邮箱、仓库 URL、最终派生数据许可和引用信息。
+本项目代码采用 MIT 许可。CSV 数据按 ODC-By 来源义务发布，具体边界见 `DATA_LICENSE.md`。作者：Hanzhi Zhang，联系邮箱：zhangjiuxi80@gmail.com。
